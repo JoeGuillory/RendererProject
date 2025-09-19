@@ -1,7 +1,7 @@
 #pragma once
 #include <glm/glm.hpp>
 #include <glm/gtx/quaternion.hpp>
-
+#include <vector>
 
 class Transform
 {
@@ -14,7 +14,7 @@ public:
 
 	Transform* Parent;
 
-	
+	std::vector<Transform*> Children;
 
 
 public:
@@ -27,8 +27,14 @@ public:
 	void SetParent(Transform* newParent);
 	Transform* GetParent() const;
 
+	Transform* GetChildAtIndex(size_t index) const;
+	size_t GetChildCount() const;
+
 	glm::vec3 GetPosition() const;
 	void SetPosition(glm::vec3 position);
+
+	glm::vec3 GetLocalPosition() const;
+	void SetLocalPosition(glm::vec3 position);
 
 	glm::quat GetRotation() const;
 	void SetRotation(glm::quat rotation);
@@ -37,7 +43,7 @@ public:
 
 	void SetForward(glm::vec3 forward);
 
-	glm::vec3 GetLossyScale() const;
+	
 
 };
 

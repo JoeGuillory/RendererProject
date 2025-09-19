@@ -130,13 +130,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Context.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Object.cpp" />
     <ClCompile Include="Render.cpp" />
     <ClCompile Include="Transform.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="Context.h" />
+    <ClInclude Include="Object.h" />
     <ClInclude Include="Render.h" />
     <ClInclude Include="Transform.h" />
   </ItemGroup>
