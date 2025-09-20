@@ -1,5 +1,6 @@
 #include "Render.h"
 #include <glm/ext.hpp>
+#define TINYOBJLOADER_IMPLEMENTATION 1
 #include <tiny_obj_loader.h>
 #include <vector>
 #define STB_IMAGE_IMPLEMENTATION 1

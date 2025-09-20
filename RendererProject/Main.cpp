@@ -67,7 +67,7 @@ int main()
 	const char* basicFrag =
 		"#version 430 core\n"
 		"out vec4 vertColor;\n"
-		"void main(){vertColor = vec4(0.0,0.0,0.0,0.0);}";
+		"void main(){vertColor = vec4(1.0,0.0,0.0,1.0);}";
 
 	glm::mat4 cam_proj = glm::perspective(glm::radians(45.5f), 800.0f / 600.0f, 0.1f, 1000.0f);
 	glm::mat4 cam_view = glm::lookAt(glm::vec3(0, 1, 20), glm::vec3(0, 5, 0), glm::vec3(0, 1, 0));
@@ -91,7 +91,7 @@ int main()
 		}
 		Window.Clear();
 		swordObject.Draw();
-
+		
 	}
 	
 	aie::FreeGeometry(basicTriangleGeo);
