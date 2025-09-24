@@ -23,7 +23,7 @@ glm::mat4 Camera::ProjMat() const
 
 void Camera::Tick(float deltaTime)
 {
-    OTransform.SetRotation(OTransform.GetRotation() * glm::quat(glm::highp_vec3(.1, 0.1, 0)));
+    OTransform.SetRotation(OTransform.GetRotation() * glm::quat(glm::highp_vec3(0, 0.1, 0)));
     
 
 
@@ -31,7 +31,7 @@ void Camera::Tick(float deltaTime)
 
 void Camera::Draw() const
 {
-    glm::vec3 ambient(0.2f, 0.2f, 0.2f);
+    glm::vec3 ambient(3.0f, 3.0f, 3.0f);
     
     SetUniform(*Shad, 0, ProjMat());
     SetUniform(*Shad, 1, ViewMat());

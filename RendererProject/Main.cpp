@@ -24,7 +24,7 @@ int main()
 
 	Geometry basicTriangleGeo = MakeGeometry(triVerts, 3, triIndicies, 3);
 	const char* modelPath = "Models/obj/soulspear.obj";
-	const char* swordTexture = "Models/img/soulspear_normal.tga";
+	const char* swordTexture = "Models/img/soulspear_diffuse.tga";
 	Texture swordTex = LoadTexture(swordTexture);
 
 	Camera swordObject;
@@ -61,7 +61,7 @@ int main()
 		"in vec2 vUV;"
 		"in vec3 vNormal;"
 		"out vec4 outColor;"
-		"void main() {float d = max(0,dot(vNormal, -lightDir)); vec3 diffuse = d * lightColor; vec4 base = texture(albedo,vUV); outColor.xyz = base.xyz * (abientLightColor + diffuse); outColor.a = base.a;}";
+		"void main() {float d = max(0,dot(vNormal, -lightDir)); vec3 diffuse = d * lightColor; vec4 base = texture(albedo,vUV); outColor.xyz = base.xyz * (ambientLightColor + diffuse); outColor.a = base.a;}";
 
 
 	const char* basicFrag =
