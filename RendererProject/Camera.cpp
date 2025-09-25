@@ -6,7 +6,7 @@ Camera::Camera()
     :NearPlane(0.5f),FarPlane(1000),VerticalFov(45.5)
 {
 
-    //OTransform.LocalScl = { 2,2,2 };
+    
     
 
 }
@@ -31,7 +31,7 @@ void Camera::Tick(float deltaTime)
 
 void Camera::Draw() const
 {
-    glm::vec3 ambient(3.0f, 3.0f, 3.0f);
+    glm::vec3 ambient(1.5f, 1.5f, 1.5f);
     
     SetUniform(*Shad, 0, ProjMat());
     SetUniform(*Shad, 1, ViewMat());
