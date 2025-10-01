@@ -34,10 +34,14 @@ int main()
 	glm::vec3 sunDirection(10, 10, 10);
 	glm::vec3 lightColor(1,0, 0);
 
+	double lastFrameTime = glfwGetTime();
+
 	while (!Window.ShouldClose())
 	{
+		double currentFrameTime = glfwGetTime();
+		double deltaTime = currentFrameTime - lastFrameTime;
 		Window.Tick();
-		swordObject.Tick(glfwGetTime());
+		swordObject.Tick(deltaTime);
 		SetUniform(advancedShad, 0, cam_proj);
 		SetUniform(advancedShad, 1, cam_view);
 		SetUniform(advancedShad, 2, swordObject.OTransform.WorldMat());
@@ -48,7 +52,7 @@ int main()
 
 		Window.Clear();
 		swordObject.Draw();
-		
+		lastFrameTime = currentFrameTime;
 	}
 	
 	aie::FreeShader(advancedShad);
