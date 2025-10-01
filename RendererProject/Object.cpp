@@ -15,6 +15,5 @@ void Object::Tick(float deltaTime)
 
 void Object::Draw() const
 {
-	
-
+	aie::Draw(*Shad, *Geo);
 }

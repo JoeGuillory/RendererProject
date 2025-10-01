@@ -39,5 +39,6 @@ namespace aie
 		Texture MakeTexture(unsigned width, unsigned height, unsigned channels, const unsigned char* pixels);
 		void FreeTexture(Texture& tex);
 		Texture LoadTexture(const char* imagePath);
+		Shader LoadShader(const char* VertPath, const char* FragPath);
 
 }

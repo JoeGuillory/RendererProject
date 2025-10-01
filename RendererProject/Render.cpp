@@ -5,6 +5,8 @@
 #include <vector>
 #define STB_IMAGE_IMPLEMENTATION 1
 #include <stb_image.h>
+#include "Utils.h"
+
 namespace aie
 {
 
@@ -209,6 +211,14 @@ namespace aie
         stbi_image_free(rawPixelData);
 
         return newTexture;
+    }
+
+    Shader LoadShader(const char* VertPath, const char* FragPath)
+    {
+        std::string VertSource = DumpToString(VertPath);
+        std::string FragSource = DumpToString(FragPath);
+
+        return MakeShader(VertSource.c_str(), FragSource.c_str());
     }
 
     void SetUniform(const Shader& shad, GLuint location, const Texture value, int textureSlot)
