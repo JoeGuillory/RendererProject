@@ -31,7 +31,7 @@ int main()
 	swordObject.Shad = &advancedShad;
 
 	glm::vec3 ambient(1, 1, 1);
-	glm::vec3 sunDirection(10, 10, 10);
+	glm::vec3 sunDirection(0, 1, -1);
 	glm::vec3 lightColor(1,0, 0);
 
 	double lastFrameTime = glfwGetTime();
