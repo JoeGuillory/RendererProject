@@ -35,7 +35,7 @@ int main()
 	Shader advancedShad = LoadShader("Res/Shaders/Camera.vert", "Res/Shaders/Camera.frag");
 	swordObject.Shad = &advancedShad;
 	box.Shad = &advancedShad;
-	glm::vec3 ambient(1, 1, 1);
+	glm::vec3 ambient(1.2f, 1.2f, 1.2f);
 	glm::vec3 sunDirection(0, 1, 0);
 	glm::vec3 lightColor(0,0,10);
 

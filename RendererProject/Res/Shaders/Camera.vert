@@ -16,6 +16,7 @@ out vec4 vPos;
 void main() 
 {
 	gl_Position = proj * view * model * position; 
-	vPos = position; vUV = uv; 
+	vPos = position; 
+	vUV = uv; 
 	vNormal = mat3(transpose(inverse(model))) * normal.xyz;
 }
