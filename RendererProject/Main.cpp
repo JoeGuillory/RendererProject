@@ -19,7 +19,7 @@ int main()
 	Geometry swordGeometry = LoadGeometry("Models/obj/soulspear.obj");
 	Texture swordTex = LoadTexture("Models/img/soulspear_diffuse.tga");
 	Geometry boxObject = LoadGeometry("Models/obj/cube.obj");
-	Texture boxTexture = LoadTexture("Models/img/terry.png");
+	Texture boxTexture = LoadTexture("Models/img/white.png");
 	box.Geo = &boxObject;
 	box.Tex = &boxTexture;
 
@@ -36,8 +36,8 @@ int main()
 	swordObject.Shad = &advancedShad;
 	box.Shad = &advancedShad;
 	glm::vec3 ambient(1, 1, 1);
-	glm::vec3 sunDirection(0, 1, -1);
-	glm::vec3 lightColor(1,0, 0);
+	glm::vec3 sunDirection(0, 1, 0);
+	glm::vec3 lightColor(0,0,10);
 
 	double lastFrameTime = glfwGetTime();
 
